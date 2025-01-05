@@ -1,0 +1,186 @@
+/* ตกแต่งพื้นฐาน */
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #121212; /* สีพื้นหลังมืด */
+    color: #e0e0e0; /* สีข้อความอ่อน */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ตกแต่ง header */
+.header {
+    background-color: #1f1f1f; /* สีพื้นหลัง header มืด */
+    color: #e0e0e0; /* สีข้อความ header อ่อน */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 4px solid #ffffff; /* สีมิ้นเข้ม */
+}
+
+.header h1 {
+    margin: 0;
+    animation: blink 1s infinite;
+    font-size: 2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+/* ตกแต่ง navigation bar */
+.nav {
+    background-color: #1f1f1f; /* สีพื้นหลัง nav มืด */
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid #ffffff; /* สีมิ้นเข้ม */
+}
+
+.nav .nav-link {
+    display: inline-block;
+    color: #e0e0e0; /* สีข้อความ nav อ่อน */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+.nav .nav-link:hover {
+    background-color: #379683; /* สีมิ้นเข้ม */
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.bordered-content {
+    border: 2px solid #ffffff; /* ขอบสีขาว */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* เงา */
+}
+
+.bordered-content {
+    border: 2px solid #ffffff; /* ขอบสีขาว */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* เงา */
+}
+
+.page-content {
+    background-color: #1f1f1f; /* สีพื้นหลัง content มืด */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 4px solid #ffffff; /* สีมิ้นเข้ม */
+}
+
+/* ตกแต่งรูปภาพ */
+.page-content img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 4px solid #ffffff; /* สีมิ้นเข้ม */
+}
+
+/* ตกแต่งปุ่มกลับไปหน้าเมนู */
+.back-to-menu {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #379683; /* สีมิ้นเข้ม */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid #1f1f1f; /* สีพื้นหลังมืด */
+    font-size: 1.2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+.back-to-menu:hover {
+    background-color: #56c596; /* สีมิ้น */
+    color: white;
+}
+
+/* เพิ่มการเคลื่อนไหวกระพริบ */
+@keyframes blink {
+    0% {
+        color: white;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+/* ตกแต่งไอคอนโซเชียลมีเดีย */
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: #e0e0e0; /* สีข้อความอ่อน */
+    text-decoration: none;
+    font-size: 1.5em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
+
+.social-media a:hover {
+    color: #379683; /* สีมิ้นเข้ม */
+}
+
+/* เพิ่มขอบสีขาวให้รูปภาพที่มาจากโฟลเดอร์ picture */
+img[src^="picture/"] {
+    border: 4px solid white; /* ขอบสีขาว */
+    border-radius: 8px; /* มุมโค้งมน */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* เงา */
+}
+
+/* Media Queries สำหรับหน้าจอขนาดต่างๆ */
+@media (max-width: 1200px) {
+    .content {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav .nav-link {
+        display: block;
+        padding: 10px;
+    }
+
+    .content {
+        max-width: 95%;
+    }
+
+    .back-to-menu {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .nav .nav-link {
+        font-size: 1em;
+    }
+
+    .back-to-menu {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+}
