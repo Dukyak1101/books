@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow of the Witch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Shadow of the Witch</h1>
+    </div>
+
+    <div class="nav" id="navbar">
+        <a href="index.html" class="nav-link" onclick="loadContent('home.html')">หน้าหลัก</a>
+        <a href="characters.html" class="nav-link" onclick="loadContent('characters.html')">ตัวละคร</a>
+        <a href="equipment.html" class="nav-link" onclick="loadContent('equipment.html')">อุปกรณ์</a>
+        <a href="about.html" class="nav-link" onclick="loadContent('about.html')">เกี่ยวกับฉัน</a>
+        <a href="contact.html" class="nav-link" onclick="loadContent('contact.html')">ช่องทางติดต่อ</a>
+    </div>
+
+    <div class="content bordered-content">
+        <div id="home" class="page-content">
+            <h2>Shadow of the Witch</h2>
+            <p>ผจญภัยสู่โลกแฟนตาซีในนิทานอันมืดมิด</p>
+            <h3>เนื้อเรื่องย่อ</h3>
+            <p>ในโลกแห่งนิทานที่เต็มไปด้วยความมหัศจรรย์และอันตราย หนูน้อยหมวกแดง ออกเดินทางเพื่อตามหาคุณยายที่ถูกลักพาตัวโดย แม่มดผู้ชั่วร้าย ด้วยความช่วยเหลือจาก หุ่นกระบอกมีชีวิต ทั้งสองต้องฟันฝ่าอุปสรรคมากมาย ตั้งแต่เมืองขนมหวาน แม่น้ำโซดา จนถึงปราสาทแม่มด พวกเขาต้องเผชิญกับศัตรูสุดโหดและไขปริศนา เพื่อหยุดยั้งแผนการชั่วร้ายที่จะทำลายดินแดนแห่งนิทาน</p>
+            <h4>พร้อมหรือยังที่จะออกผจญภัยและสร้างตำนานบทใหม่หรือยัง!</h4>
+            <p>เกมแอคชั่นผจญภัยในมุมมองบุคคลที่สาม ที่คุณจะได้สวมบทเป็นหนูน้อยหมวกแดงและหุ่นกระบอกคู่หู ออกเดินทางผ่านดินแดนสุดลึกลับ เช่น เมืองขนม แม่น้ำโซดา และปราสาทแม่มด พร้อมใช้อาวุธเฉพาะตัวในการต่อสู้และไขปริศนา เพื่อช่วยคุณยายและหยุดยั้งแม่มดผู้ชั่วร้าย!</p>
+            
+            <img src="logo.jpg" alt="Shadow of the Witch" style="width:100%;max-width:600px;margin-top:20px;">
+    
+            <h3>ประเภทเกม</h3>
+            <li>แอคชั่นผจญภัย (Action-Adventure)</li>
+            <h3>รูปแบบการเล่น</h3>
+            <li>สำรวจโลกแฟนตาซีในแต่ละพื้นที่ที่มีเอกลักษณ์เฉพาะ</li>
+            <li>สลับเล่นระหว่างตัวละครสองตัว</li>
+        </div>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', page, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+
+    
+</body>
+</html>
